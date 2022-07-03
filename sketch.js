@@ -10,7 +10,7 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 
 var score;
 var gameOverImg,restartImg
-var jumpSound , checkPointSound, dieSound
+var jumpSound , checkpointSound, dieSound
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
@@ -32,7 +32,7 @@ function preload(){
   
   jumpSound = loadSound("jump.mp3")
   dieSound = loadSound("die.mp3")
-  checkPointSound = loadSound("checkpoint.mp3")
+  checkpointSound = loadSound("checkpoint.mp3")
 }
 
 function setup() {
@@ -95,7 +95,7 @@ function draw() {
     score = score + Math.round(getFrameRate()/60);
     
     if(score>0 && score%100 === 0){
-       checkPointSound.play() 
+       checkpointSound.play() 
     }
     
     if (ground.x < 0){
